@@ -1,27 +1,30 @@
 import FruitHeader from "./FruitHeader";
 import FruitCard from "./FruitCard";
 import FruitDescription from "./FruitDescription";
+import TEST_DATA from "../../data/durian.json";
 
-const FRUIT_DATA = {
-  "name": "Durian",
-  "image_location": "/durian.webp",
-  "sweetness": 4,
-  "origin": "Vietnam",
-  "smelliness": 900
-};
 
-console.log(FRUIT_DATA);
+console.log(TEST_DATA);
+
+// const FRUIT_DATA = {
+//   "name": "Banana",
+//   "image_location": "/banana.avif",
+//   "sweetness": 4,
+//   "origin": "El Salvidor",
+//   "smelliness": 9
+// };
+
+// console.log(FRUIT_DATA);
 
 export default function Fruit() {
   // TODO: FETCH DATA HERE
-  const fruit = FRUIT_DATA;
+  const fruit = TEST_DATA;
   return (
     <div>
-      {/* FRUIT HEADER */}
       <FruitHeader />
-      {/* FRUIT CARD */}
-      <FruitCard />
-      {/* FRUIT DESCRIPTION */}
+      <FruitCard 
+        name={fruit.name}
+        imgSrc={fruit.image_location} />
       <FruitDescription
           origin={fruit.origin}
           smelliness={fruit.smelliness} />
