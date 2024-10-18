@@ -1,7 +1,7 @@
 import FruitHeader from "./FruitHeader";
 import FruitCard from "./FruitCard";
 import FruitDescription from "./FruitDescription";
-import TEST_DATA from "../../data/durian.json";
+import TEST_DATA from "../../mock-data/durian.json";
 
 
 console.log(TEST_DATA);
