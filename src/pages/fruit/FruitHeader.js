@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export default function FruitHeader(){
   return (
@@ -6,3 +7,6 @@ export default function FruitHeader(){
   </h1>
   );
 }
+
+FruitHeader.propTypes = {
+};

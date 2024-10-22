@@ -1,6 +1,7 @@
 import FruitHeader from "./FruitHeader";
 import FruitCard from "./FruitCard";
 import FruitDescription from "./FruitDescription";
+import FruitLike from "./FruitLike";
 import TEST_DATA from "../../mock-data/durian.json";
 
 
@@ -28,6 +29,7 @@ export default function Fruit() {
       <FruitDescription
           origin={fruit.origin}
           smelliness={fruit.smelliness} />
+      <FruitLike name={fruit.name}/>
     </div>
   );
 }

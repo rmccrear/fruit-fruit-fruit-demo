@@ -1,3 +1,8 @@
+
+Instructions on how to setup Tailwind CSS with Storybook in a Next.js project. [Link to the article](https://dev.to/lico/nextjs-using-tailwind-with-storybook-5aie) https://dev.to/lico/nextjs-using-tailwind-with-storybook-5aie
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
