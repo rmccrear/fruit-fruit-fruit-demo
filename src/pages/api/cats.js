@@ -1,8 +1,9 @@
 const API_NINJAS_KEY = process.env.API_NINJAS_KEY;
-const CATS_SERVICE_URL =  process.env.CATS_SERVICE_URL;
+// const CATS_SERVICE_URL =  process.env.CATS_SERVICE_URL;
 
 async function fetchCatsFromNinja(partialName) {
-    const url = `${CATS_SERVICE_URL}?name=${partialName}`;
+    // const url = `${CATS_SERVICE_URL}?name=${partialName}`;
+    const url = `https://api.api-ninjas.com/v1/cats?name=${partialName}`;
     const result = await fetch(url, {
         headers: { 'X-Api-Key': API_NINJAS_KEY }
     });
