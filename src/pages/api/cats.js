@@ -13,23 +13,23 @@ async function fetchCatsFromNinja(partialName) {
 
 
 // handler takes Request and Response
-// export default async function handler(req, res) {
-//     const query = req.query;
-//     console.log(query);
-//     const cats = await fetchCatsFromNinja("cali");
-//     console.log(cats);
+export default async function handler(req, res) {
+    const query = req.query;
+    console.log(query);
+    const cats = await fetchCatsFromNinja("cali");
+    console.log(cats);
 
-//     const responseData = {};
-//     if (cats.length > 0) {
-//         responseData.name = cats[0].name;
-//         responseData.origin = cats[0].origin;
-//         responseData.length = cats[0].length;
-//         responseData.img = cats[0].image_link;
-//     } else {
-//         responseData.error = "No Cats";
-//     }
-//     res.status(200).json(responseData);
-// }
+    const responseData = {};
+    if (cats.length > 0) {
+        responseData.name = cats[0].name;
+        responseData.origin = cats[0].origin;
+        responseData.length = cats[0].length;
+        responseData.img = cats[0].image_link;
+    } else {
+        responseData.error = "No Cats";
+    }
+    res.status(200).json(responseData);
+}
 
 
 // ANOTHER WAY
@@ -68,21 +68,21 @@ async function fetchCatsFromNinja(partialName) {
 
 // Third way
 
-export default  function handler(req, res) {
-    const query = req.query;
-    console.log(query);
-    fetchCatsFromNinja("cali").then((cats) => {
-        console.log(cats);
+// export default  function handler(req, res) {
+//     const query = req.query;
+//     console.log(query);
+//     fetchCatsFromNinja("cali").then((cats) => {
+//         console.log(cats);
 
-        const responseData = {};
-        if (cats.length > 0) {
-            responseData.name = cats[0].name;
-            responseData.origin = cats[0].origin;
-            responseData.length = cats[0].length;
-            responseData.img = cats[0].image_link;
-        } else {
-            responseData.error = "No Cats";
-        }
-        res.status(200).json(responseData);
-    });
-}
+//         const responseData = {};
+//         if (cats.length > 0) {
+//             responseData.name = cats[0].name;
+//             responseData.origin = cats[0].origin;
+//             responseData.length = cats[0].length;
+//             responseData.img = cats[0].image_link;
+//         } else {
+//             responseData.error = "No Cats";
+//         }
+//         res.status(200).json(responseData);
+//     });
+// }
