@@ -5,7 +5,7 @@
 // 3. (optional: simplify the data)
 // 4. return the data
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   let q = req.query;
   let friend = q.friend;
   console.log(q);
