@@ -1,4 +1,4 @@
-import FruitHeader from './FruitHeader';
+import FruitHeader from '../pages/fruit/FruitHeader';
 
 const meta = {
   component: FruitHeader,
