@@ -1,14 +1,36 @@
 const API_NINJAS_KEY = process.env.API_NINJAS_KEY;
 // const CATS_SERVICE_URL =  process.env.CATS_SERVICE_URL;
 
+const catHut = {};
+
+// const cat = {};
+// cat.name = "Frisky";
+// cat["name"] = "Frisky";
+// cat["russian"] = {...}
+
+// this is cache ... {
+//   "russian" : {name: "Russian Cat", ...},
+//   "bombay": {...},
+//   "coon": {...}
+
+// }
+
+// cached fetch
 async function fetchCatsFromNinja(partialName) {
     // const url = `${CATS_SERVICE_URL}?name=${partialName}`;
     const url = `https://api.api-ninjas.com/v1/cats?name=${partialName}`;
-    const result = await fetch(url, {
-        headers: { 'X-Api-Key': API_NINJAS_KEY }
-    });
-    const data = await result.json();
-    return data;
+    if(catHut[partialName] !== undefined) {
+        console.log("using cached version of: ", partialName);
+        return catHut[partialName];
+    } else {
+        console.log("fetching: ", partialName);
+        const result = await fetch(url, {
+            headers: { 'X-Api-Key': API_NINJAS_KEY }
+        });
+        const data = await result.json();
+        catHut[partialName] = data;
+        return data;
+    }
 }
 
 
@@ -16,10 +38,10 @@ async function fetchCatsFromNinja(partialName) {
 // handler takes Request and Response
 export default async function handler(req, res) {
     const query = req.query;
-    console.log(query);
+    // console.log(query);
     const searchTerm = query.name;
     const cats = await fetchCatsFromNinja(searchTerm);
-    console.log(cats);
+    // console.log(cats);
 
     const responseData = {};
     if (cats.length > 0) {
