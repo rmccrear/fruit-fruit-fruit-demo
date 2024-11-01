@@ -47,7 +47,7 @@ export default function CatPage() {
       </div>
       <div>
         <h4> Cat form </h4>
-        <p>Let's search for {searchTerm}</p>
+        <p>Letʼs search for {searchTerm}</p>
         <form onSubmit={handleSubmit}>
           <label>
             Kind of Cat to search for:
