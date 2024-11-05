@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export default function FruitDescription (props) {
   return (
@@ -8,4 +9,9 @@ export default function FruitDescription (props) {
     </div>
   </div>
   );
+}
+
+FruitDescription.propTypes = {
+  origin: PropTypes.string,
+  smelliness: PropTypes.number
 }
